@@ -7,5 +7,5 @@ services:
       network: host
     command: ["java","-Xmx1024m","-jar","MegaMek.jar","-dedicated","-password","$PASSWORD"]
     ports:
-      - "2346:2346"
+      - $PORT_RANGE:2346
     user: 1001:1001

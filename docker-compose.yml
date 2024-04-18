@@ -5,6 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
       network: host
+      args:
+        - MEGAMEK_VERSION=$MEGAMEK_VERSION
     command: ["java","-Xmx1024m","-jar","MegaMek.jar","-dedicated","-password","$PASSWORD"]
     ports:
       - $PORT_RANGE:2346
